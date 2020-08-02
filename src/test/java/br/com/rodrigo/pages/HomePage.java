@@ -14,7 +14,7 @@ public class HomePage extends BasePage{
 	}
 
 	public void clicarClienteCadastrado() {
-	//	this.clicarItemLista("Fulano");
+		this.clicarItemLista("br.com.dudstecnologia.cadastrodeclientes:id/listViewClientes", "Fulano");
 	}
 
 	public void validarClienteExcluido() {

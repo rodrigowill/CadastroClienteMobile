@@ -1,6 +1,9 @@
 package br.com.rodrigo.core;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+
+import io.appium.java_client.MobileElement;
 
 public class BasePage {
 	
@@ -32,13 +35,30 @@ public class BasePage {
 		return obterMensagem(By.id(id));
 	}
 	
+	public void clicarAlertaOK() {
+		DriverFactory.getDriver().switchTo().alert().accept();
+		DriverFactory.getDriver().switchTo();
+	}
+	
 	public void selecionarCombo(By by, String estado) {
-		DriverFactory.getDriver().findElement(by).click();
-		DriverFactory.getDriver().findElement(By.xpath("//android.widget.CheckedTextView[@text='Nintendo Switch']")).click();;
+		
+		MobileElement elemento = DriverFactory.getDriver().findElement(by);
+		elemento.click();
+		Select combo = new Select(elemento);
+		combo.selectByVisibleText(estado);
+		
+	//	DriverFactory.getDriver().findElement(by).click();
+	//	DriverFactory.getDriver().findElement(By.xpath("//br.com.dudstecnologia.cadastrodeclientes:id/spinnerEstados[@text='"+estado+"']")).click();;
 	}
 	
 	public void selecionarComboPorId(String id, String estado) {
 		selecionarCombo(By.id(id), estado);
+	}
+	
+	public void clicarItemLista(String id, String texto) {
+		
+		DriverFactory.getDriver().findElement(By.className("android.widget.LinearLayout")).click();;
+		//DriverFactory.getDriver().findElement(By.xpath("//"+id+"[@text='"+texto+"']")).click();;
 	}
 
 }

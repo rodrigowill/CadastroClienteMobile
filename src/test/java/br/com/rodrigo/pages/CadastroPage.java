@@ -43,7 +43,7 @@ public class CadastroPage extends BasePage{
 	}
 
 	public void selecionarEstado() {
-		this.selecionarComboPorId("br.com.dudstecnologia.cadastrodeclientes:id/spinnerEstados", "SP");
+	//	this.selecionarComboPorId("br.com.dudstecnologia.cadastrodeclientes:id/spinnerEstados", "SP");
 	}
 
 	public void escreverTel1() {
@@ -84,6 +84,10 @@ public class CadastroPage extends BasePage{
 
 	public void confirmarExclusao() {
 		
+	}
+
+	public void clicarOKNaMensagemDeSucesso() {
+		this.clicarAlertaOK();
 	}
 
 }
