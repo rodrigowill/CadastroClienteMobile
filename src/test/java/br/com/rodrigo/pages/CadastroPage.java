@@ -31,7 +31,7 @@ public class CadastroPage extends BasePage{
 	}
 
 	public void escreverBairro() {
-		this.escreverPorId("br.com.dudstecnologia.cadastrodeclientes:id/editBairro", "Mooca");
+		this.escreverPorId("br.com.dudstecnologia.cadastrodeclientes:id/editBairro", "Penhinha");
 	}
 
 	public void escreverCEP() {
@@ -39,11 +39,11 @@ public class CadastroPage extends BasePage{
 	}
 
 	public void escreverCidade() {
-		this.escreverPorId("br.com.dudstecnologia.cadastrodeclientes:id/editCidade", "São Paulo");
+		this.escreverPorId("br.com.dudstecnologia.cadastrodeclientes:id/editCidade", "Fortaleza");
 	}
 
 	public void selecionarEstado() {
-	//	this.selecionarComboPorId("br.com.dudstecnologia.cadastrodeclientes:id/spinnerEstados", "SP");
+		this.selecionarComboEItemEstado("br.com.dudstecnologia.cadastrodeclientes:id/spinnerEstados", "android.widget.TextView", "CE");
 	}
 
 	public void escreverTel1() {
@@ -77,6 +77,14 @@ public class CadastroPage extends BasePage{
 	public void validarMensagemAlteracao() {
 		Assert.assertEquals("Cadastro atualizado com sucesso", this.obterMensagemPorId("android:id/message"));
 	}
+	
+	public void clicarOKNaMensagemDeSucesso() {
+		this.clicarAlertaOK();
+	}
+
+	public void voltarTela() {
+		this.voltarTelaAnterior();
+	}
 
 	public void clicarBotaoExcluir() {
 		this.clicarBotaoPorId("br.com.dudstecnologia.cadastrodeclientes:id/btnExcluir");
@@ -86,8 +94,6 @@ public class CadastroPage extends BasePage{
 		
 	}
 
-	public void clicarOKNaMensagemDeSucesso() {
-		this.clicarAlertaOK();
-	}
+
 
 }

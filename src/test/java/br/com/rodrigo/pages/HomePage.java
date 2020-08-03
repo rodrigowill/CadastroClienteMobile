@@ -6,7 +6,6 @@ public class HomePage extends BasePage{
 
 	public void clicarAdicionar() {
 		this.clicarBotaoPorClassName("android.widget.ImageButton");
-		
 	}
 
 	public void clicarCadastrarNovo() {

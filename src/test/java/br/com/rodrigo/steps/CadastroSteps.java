@@ -39,7 +39,6 @@ public class CadastroSteps {
 	@Entao("^o cadastro eh realizado com sucesso$")
 	public void o_cadastro_eh_realizado_com_sucesso() throws Throwable {
 		cadastroPage.validarMensagemCadastro();
-		cadastroPage.clicarOKNaMensagemDeSucesso();
 		DriverFactory.killDriver();
 	}
 
@@ -47,6 +46,7 @@ public class CadastroSteps {
 	public void seleciono_algum_cliente_cadastrado() throws Throwable {
 		realizo_o_cadastro_basico_de_um_cliente();
 		cadastroPage.clicarOKNaMensagemDeSucesso();
+		cadastroPage.voltarTela();
 		homePage.clicarClienteCadastrado();
 	}
 

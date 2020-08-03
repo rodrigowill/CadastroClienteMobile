@@ -4,8 +4,8 @@ Funcionalidade: gerenciar cadastro de clientes
 	Como um usuario
 	Eu quero gerenciar o cadastro dos clientes
 	Para poder consulta-los quando necessario
-
-
+	
+@executar
 Cenario: Cadastrar cliente com sucesso
 	Dado que estou no app
 	Quando realizo o cadastro basico de um cliente

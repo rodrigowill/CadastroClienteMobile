@@ -1,9 +1,6 @@
 package br.com.rodrigo.core;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
-
-import io.appium.java_client.MobileElement;
 
 public class BasePage {
 	
@@ -39,26 +36,20 @@ public class BasePage {
 		DriverFactory.getDriver().switchTo().alert().accept();
 		DriverFactory.getDriver().switchTo();
 	}
-	
-	public void selecionarCombo(By by, String estado) {
-		
-		MobileElement elemento = DriverFactory.getDriver().findElement(by);
-		elemento.click();
-		Select combo = new Select(elemento);
-		combo.selectByVisibleText(estado);
-		
-	//	DriverFactory.getDriver().findElement(by).click();
-	//	DriverFactory.getDriver().findElement(By.xpath("//br.com.dudstecnologia.cadastrodeclientes:id/spinnerEstados[@text='"+estado+"']")).click();;
+
+	public void selecionarComboEItemEstado(String idCombo, String classItens, String opcaoEstado) {
+		DriverFactory.getDriver().findElement(By.id(idCombo)).click();
+		DriverFactory.getDriver().findElement(By.xpath("//" + classItens + "[@text='" + opcaoEstado + "']")).click();
 	}
-	
-	public void selecionarComboPorId(String id, String estado) {
-		selecionarCombo(By.id(id), estado);
-	}
-	
+
 	public void clicarItemLista(String id, String texto) {
-		
-		DriverFactory.getDriver().findElement(By.className("android.widget.LinearLayout")).click();;
+		DriverFactory.getDriver().findElement(By.id("br.com.dudstecnologia.cadastrodeclientes:id/nomeLista")).click();
 		//DriverFactory.getDriver().findElement(By.xpath("//"+id+"[@text='"+texto+"']")).click();;
+		
+	}
+	
+	public void voltarTelaAnterior() {
+		DriverFactory.getDriver().navigate().back();
 	}
 
 }
