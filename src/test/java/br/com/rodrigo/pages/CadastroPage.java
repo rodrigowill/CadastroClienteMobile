@@ -91,7 +91,7 @@ public class CadastroPage extends BasePage{
 	}
 
 	public void confirmarExclusao() {
-		
+		this.clicarAlertaOK();
 	}
 
 

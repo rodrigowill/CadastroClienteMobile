@@ -66,8 +66,6 @@ public class CadastroSteps {
 
 	@Quando("^deleto esse cliente$")
 	public void deleto_esse_cliente() throws Throwable {
-		realizo_o_cadastro_basico_de_um_cliente();
-		homePage.clicarClienteCadastrado();
 		cadastroPage.clicarBotaoExcluir();
 		cadastroPage.confirmarExclusao();
 	}
@@ -75,6 +73,7 @@ public class CadastroSteps {
 	@Entao("^a delecao eh efetuada com sucesso$")
 	public void a_delecao_eh_efetuada_com_sucesso() throws Throwable {
 		homePage.validarClienteExcluido();
+		DriverFactory.killDriver();
 	}
 
 }

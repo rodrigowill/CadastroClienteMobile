@@ -5,19 +5,20 @@ Funcionalidade: gerenciar cadastro de clientes
 	Eu quero gerenciar o cadastro dos clientes
 	Para poder consulta-los quando necessario
 	
-@executar
+
 Cenario: Cadastrar cliente com sucesso
 	Dado que estou no app
 	Quando realizo o cadastro basico de um cliente
 	Entao o cadastro eh realizado com sucesso
 
-@executar
+
 Cenario: Alterar cadastro de cliente com sucesso
 	Dado que estou no app
 	E seleciono algum cliente cadastrado
 	Quando realizo alguma alteração nos dados cadastrais desse cliente
 	Entao a alteracao eh efetuada com sucesso
-	
+
+@executar	
 Cenario: Deletar cliente cadastrado com sucesso
 	Dado que estou no app
 	E seleciono algum cliente cadastrado

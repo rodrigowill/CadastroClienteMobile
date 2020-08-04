@@ -1,6 +1,7 @@
 package br.com.rodrigo.core;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 
 public class BasePage {
 	
@@ -42,14 +43,24 @@ public class BasePage {
 		DriverFactory.getDriver().findElement(By.xpath("//" + classItens + "[@text='" + opcaoEstado + "']")).click();
 	}
 
-	public void clicarItemLista(String id, String texto) {
-		DriverFactory.getDriver().findElement(By.id("br.com.dudstecnologia.cadastrodeclientes:id/nomeLista")).click();
-		//DriverFactory.getDriver().findElement(By.xpath("//"+id+"[@text='"+texto+"']")).click();;
-		
+	public void clicarItemLista(String classe, String texto) {
+		DriverFactory.getDriver().findElement(By.xpath("//" + classe + "[@text='" + texto + "']")).click();
 	}
 	
 	public void voltarTelaAnterior() {
 		DriverFactory.getDriver().navigate().back();
+	}
+	
+	public void pesquisarCliente(String nome) {
+		DriverFactory.getDriver().findElement(By.id("br.com.dudstecnologia.cadastrodeclientes:id/editPesquisar")).sendKeys(nome);
+	}
+	
+	public boolean existeClienteExcluido(String classe, String texto) {
+		try {
+			return DriverFactory.getDriver().findElement(By.xpath("//" + classe + "[@text='" + texto + "']")).isDisplayed();
+		} catch (NoSuchElementException e) {
+			return false;
+		}
 	}
 
 }

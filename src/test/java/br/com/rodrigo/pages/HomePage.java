@@ -1,5 +1,7 @@
 package br.com.rodrigo.pages;
 
+import org.junit.Assert;
+
 import br.com.rodrigo.core.BasePage;
 
 public class HomePage extends BasePage{
@@ -13,11 +15,12 @@ public class HomePage extends BasePage{
 	}
 
 	public void clicarClienteCadastrado() {
-		this.clicarItemLista("br.com.dudstecnologia.cadastrodeclientes:id/listViewClientes", "Fulano");
+		this.clicarItemLista("android.widget.TextView", "Fulano");
 	}
 
 	public void validarClienteExcluido() {
-		
+		this.pesquisarCliente("Fulano");
+		Assert.assertEquals(false, this.existeClienteExcluido("android.widget.TextView", "Fulano"));
 	}
 
 }

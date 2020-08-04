@@ -9,19 +9,19 @@
     "line": 3,
     "elements": [
       {
-        "line": 9,
-        "name": "Cadastrar cliente com sucesso",
+        "line": 22,
+        "name": "Deletar cliente cadastrado com sucesso",
         "description": "",
-        "id": "gerenciar-cadastro-de-clientes;cadastrar-cliente-com-sucesso",
+        "id": "gerenciar-cadastro-de-clientes;deletar-cliente-cadastrado-com-sucesso",
         "type": "scenario",
         "keyword": "Cenario",
         "steps": [
           {
             "result": {
-              "duration": 29051829600,
+              "duration": 29268202700,
               "status": "passed"
             },
-            "line": 10,
+            "line": 23,
             "name": "que estou no app",
             "match": {
               "location": "CadastroSteps.que_estou_no_app()"
@@ -30,63 +30,10 @@
           },
           {
             "result": {
-              "duration": 19556457900,
+              "duration": 21903071300,
               "status": "passed"
             },
-            "line": 11,
-            "name": "realizo o cadastro basico de um cliente",
-            "match": {
-              "location": "CadastroSteps.realizo_o_cadastro_basico_de_um_cliente()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 857422000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "o cadastro eh realizado com sucesso",
-            "match": {
-              "location": "CadastroSteps.o_cadastro_eh_realizado_com_sucesso()"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "line": 8,
-            "name": "@executar"
-          }
-        ]
-      },
-      {
-        "line": 15,
-        "name": "Alterar cadastro de cliente com sucesso",
-        "description": "",
-        "id": "gerenciar-cadastro-de-clientes;alterar-cadastro-de-cliente-com-sucesso",
-        "type": "scenario",
-        "keyword": "Cenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 47200,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "que estou no app",
-            "match": {
-              "location": "CadastroSteps.que_estou_no_app()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 10298137100,
-              "error_message": "org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-U1Q8D37\u0027, ip: \u0027192.168.1.39\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_241\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: C:\\Users\\Rodrigo\\desafio-am..., appPackage: br.com.dudstecnologia.cadas..., autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {app: C:\\Users\\Rodrigo\\desafio-am..., autoGrantPermissions: true, automationName: uiautomator2, deviceName: emulator-5554, platformName: android}, deviceApiLevel: 27, deviceManufacturer: motorola, deviceModel: Moto G (5S), deviceName: 0037363468, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 0037363468, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.1.0, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: fb1d8675-855b-472b-97e7-199a46341dda\n*** Element info: {Using\u003dclass name, value\u003dandroid.widget.ImageButton}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElementByClassName(DefaultGenericMobileDriver.java:125)\r\n\tat io.appium.java_client.AppiumDriver.findElementByClassName(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElementByClassName(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.By$ByClassName.findElement(By.java:389)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)\r\n\tat br.com.rodrigo.core.BasePage.clicarBotao(BasePage.java:8)\r\n\tat br.com.rodrigo.core.BasePage.clicarBotaoPorClassName(BasePage.java:12)\r\n\tat br.com.rodrigo.pages.HomePage.clicarAdicionar(HomePage.java:8)\r\n\tat br.com.rodrigo.steps.CadastroSteps.realizo_o_cadastro_basico_de_um_cliente(CadastroSteps.java:21)\r\n\tat br.com.rodrigo.steps.CadastroSteps.seleciono_algum_cliente_cadastrado(CadastroSteps.java:47)\r\n\tat ✽.E seleciono algum cliente cadastrado(src/test/resources/features/cadastro.feature:17)\r\n",
-              "status": "failed"
-            },
-            "line": 17,
+            "line": 24,
             "name": "seleciono algum cliente cadastrado",
             "match": {
               "location": "CadastroSteps.seleciono_algum_cliente_cadastrado()"
@@ -95,30 +42,33 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1898005100,
+              "status": "passed"
             },
-            "line": 18,
-            "name": "realizo alguma alteração nos dados cadastrais desse cliente",
+            "line": 25,
+            "name": "deleto esse cliente",
             "match": {
-              "location": "CadastroSteps.realizo_alguma_alteração_nos_dados_cadastrais_desse_cliente()"
+              "location": "CadastroSteps.deleto_esse_cliente()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 11570444500,
+              "error_message": "java.lang.AssertionError: expected:\u003cfalse\u003e but was:\u003ctrue\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:120)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat br.com.rodrigo.pages.HomePage.validarClienteExcluido(HomePage.java:23)\r\n\tat br.com.rodrigo.steps.CadastroSteps.a_delecao_eh_efetuada_com_sucesso(CadastroSteps.java:75)\r\n\tat ✽.Entao a delecao eh efetuada com sucesso(src/test/resources/features/cadastro.feature:26)\r\n",
+              "status": "failed"
             },
-            "line": 19,
-            "name": "a alteracao eh efetuada com sucesso",
+            "line": 26,
+            "name": "a delecao eh efetuada com sucesso",
             "match": {
-              "location": "CadastroSteps.a_alteracao_eh_efetuada_com_sucesso()"
+              "location": "CadastroSteps.a_delecao_eh_efetuada_com_sucesso()"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "line": 14,
+            "line": 21,
             "name": "@executar"
           }
         ]
