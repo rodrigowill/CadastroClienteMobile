@@ -9,7 +9,7 @@ import cucumber.api.java.pt.Quando;
 public class CadastroSteps {
 	
 	HomePage homePage = new HomePage();
-	CadastroPage cadastroPage = new CadastroPage();
+	CadastroPage cadastroPage = new CadastroPage();	
 	
 	@Dado("^que estou no app$")
 	public void que_estou_no_app() throws Throwable {

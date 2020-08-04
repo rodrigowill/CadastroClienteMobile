@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features/cadastro.feature",
 		glue = "br.com.rodrigo.steps",
-		tags = {"@executar"},
+	//	tags = {"@executar"},
 		plugin = {"pretty", "html:target/report-html", "json:target/report.json"}, // Criação de relatório em html e json
 		monochrome = true
 		)

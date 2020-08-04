@@ -18,7 +18,7 @@ Cenario: Alterar cadastro de cliente com sucesso
 	Quando realizo alguma alteração nos dados cadastrais desse cliente
 	Entao a alteracao eh efetuada com sucesso
 
-@executar	
+
 Cenario: Deletar cliente cadastrado com sucesso
 	Dado que estou no app
 	E seleciono algum cliente cadastrado
